@@ -282,7 +282,7 @@ function voiceCommand()
 		   .join('')
 		console.log(transcript);
 	
-		if(transcript.includes('be final answer') || transcript.includes('BA final answer'))
+		if(transcript.includes('be final answer') || transcript.includes('BA final answer') || transcript.includes('B final answer'))
 		{
 			var ansSelected = rd2.value;
 			checkDiv2();	
