@@ -415,6 +415,140 @@ function voiceCommand()
 }
 voiceCommand();
 
+// Keyboard ansewring
+
+window.addEventListener('keydown', function(e){
+	//console.log(e.keyCode);
+	if(e.keyCode == 66)
+	{
+		var ansSelected = rd2.value;
+		checkDiv2();	
+		if(ansSelected == first[qindex].answer)
+		{
+			option2.checked ==true;
+			var scoreArr = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelwe','thirteen','fourteen','fifteen'];
+			var scorebrd = document.getElementById(scoreArr[score]);	
+			scorebrd.style.background = 'lime';
+	
+			if(score > 0)
+			{
+				var defbrd = document.getElementById(scoreArr[score-1]);
+				defbrd.style.background = '#390F4E';
+			}
+			
+			score++;
+			bgRand();
+			correctPlay();
+			defcolor();
+			qindex++;
+			setTimeout(function(){loadQuestion(qindex)}, 4000) ;	
+		}
+		
+		else
+		{
+			wrongAns();
+			quit();
+		}
+	}
+
+	if(e.keyCode == 65)
+	{
+		var ansSelected = rd1.value;
+		checkDiv();	
+		if(ansSelected == first[qindex].answer)
+		{
+			option1.checked ==true;
+			var scoreArr = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelwe','thirteen','fourteen','fifteen'];
+			var scorebrd = document.getElementById(scoreArr[score]);	
+			scorebrd.style.background = 'lime';
+	
+			if(score > 0)
+			{
+				var defbrd = document.getElementById(scoreArr[score-1]);
+				defbrd.style.background = '#390F4E';
+			}
+		
+			score++;
+			bgRand();
+			correctPlay();
+			defcolor();
+			qindex++;
+			setTimeout(function(){loadQuestion(qindex)}, 4000) ;	
+
+		}
+		
+		else
+		{
+			wrongAns();
+			quit();
+		}
+	}
+	if(e.keyCode == 67)
+	{
+		var ansSelected = rd3.value;
+		checkDiv3();	
+		if(ansSelected == first[qindex].answer)
+		{
+			option3.checked ==true;
+			var scoreArr = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelwe','thirteen','fourteen','fifteen'];
+			var scorebrd = document.getElementById(scoreArr[score]);	
+			scorebrd.style.background = 'lime';
+	
+			if(score > 0)
+			{
+				var defbrd = document.getElementById(scoreArr[score-1]);
+				defbrd.style.background = '#390F4E';
+			}
+			
+			score++;
+			bgRand();
+			correctPlay();
+			defcolor();
+			qindex++;
+			setTimeout(function(){loadQuestion(qindex)}, 4000) ;	
+		}
+		
+		else
+		{
+			wrongAns();
+			quit();
+		}
+	}
+
+	if(e.keyCode == 68)
+	{
+		var ansSelected = rd4.value;
+		checkDiv4();	
+		if(ansSelected == first[qindex].answer)
+		{
+			option4.checked ==true;
+			var scoreArr = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelwe','thirteen','fourteen','fifteen'];
+			var scorebrd = document.getElementById(scoreArr[score]);	
+			scorebrd.style.background = 'lime';
+	
+			if(score > 0)
+			{
+				var defbrd = document.getElementById(scoreArr[score-1]);
+				defbrd.style.background = '#390F4E';
+			}
+			
+			score++;
+			bgRand();
+			correctPlay();
+			defcolor();
+			qindex++;
+			setTimeout(function(){loadQuestion(qindex)}, 4000) ;	
+		}
+		
+		else
+		{
+			wrongAns();
+			quit();
+		}
+	}
+
+});
+
 
 // Play Audio when answer is true
 
